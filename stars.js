@@ -34,6 +34,14 @@ window.addEventListener('mousemove', (e) => {
     if (!raf) raf = requestAnimationFrame(updateStars);
 });
 
+window.addEventListener('touchmove', (e) => {
+    if (e.touches.length > 0) {
+        mouseX = e.touches[0].clientX;
+        mouseY = e.touches[0].clientY;
+        if (!raf) raf = requestAnimationFrame(updateStars);
+    }
+});
+
 function updateStars() {
     raf = 0;
 
