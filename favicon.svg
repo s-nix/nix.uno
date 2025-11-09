@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="grey" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Computer with cross">
+    <title>Computer with cross</title>
+    <!-- Monitor -->
+    <rect x="8" y="10" width="48" height="32" rx="4"/>
+    <!-- Cross on screen -->
+    <path d="M32 16v20M24 22h16"/>
+    <!-- Stand -->
+    <path d="M24 50h16M20 54h24"/>
+</svg>
