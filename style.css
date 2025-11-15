@@ -34,13 +34,18 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 html {
     color: white;
     background-color: black;
     font-family: 'PixelifySans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
 }
 
 a {
@@ -59,15 +64,27 @@ a:hover {
     transition: filter 500ms ease;
 }
 
-.hero {
-    align-items: end;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
+main#page {
+    flex: 1;
     height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
+}
+
+.panel {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    padding: 3em 4em;
     display: flex;
     flex-direction: column;
-    padding-right: 4em;
+    justify-content: center;
+}
+
+.hero {
+    align-items: end;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-icon {
@@ -111,4 +128,149 @@ a:hover {
     --ty: 0px;
     will-change: transform, filter, box-shadow, opacity;
     transition: filter 120ms ease, box-shadow 120ms ease;
+}
+
+#scroll-to-projects {
+    margin-top: 2em;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: inherit;
+    padding: 0.75em 1.5em;
+    font-family: inherit;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: background 250ms ease, color 250ms ease, border-color 250ms ease;
+}
+
+#scroll-to-projects:hover,
+#scroll-to-projects:focus-visible {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.projects {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.projects-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #8dd3ff;
+    margin-bottom: 0.5em;
+}
+
+.projects h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 1.5em;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5em;
+}
+
+.project-card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 1.5em;
+    background: rgba(8, 8, 8, 0.85);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    min-height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card.under-construction {
+    background: repeating-linear-gradient(135deg,
+            #f9d9234c 0 28px,
+            #0b0b0b 28px 56px);
+    border-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.project-card.under-construction::after {
+    content: 'Under Construction';
+    position: absolute;
+    top: 1.6em;
+    right: -2.9em;
+    padding: 0.35em 3em;
+    background: rgba(0, 0, 0, 0.75);
+    color: #f9d9239d;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    transform: rotate(20deg);
+}
+
+.project-card header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #ffa6ff;
+}
+
+.project-links {
+    margin-top: auto;
+    display: flex;
+    gap: 1em;
+}
+
+.project-links a {
+    font-weight: bold;
+}
+
+.project-image {
+    position: absolute;
+    bottom: 1.25em;
+    right: 1.25em;
+    max-width: 50px;
+    max-height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .panel {
+        padding: 2em;
+        align-items: flex-start;
+    }
+
+    .hero {
+        align-items: flex-start;
+    }
+
+    #hero-links {
+        flex-wrap: wrap;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }

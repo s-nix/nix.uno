@@ -12,29 +12,129 @@
 <body>
     <div id="stars"></div>
     <script src="stars.js"></script>
-    <div class="hero">
-        <img style="margin-right: -40px;" src="assets/img/stephen.png"></img>
-        <h1 id="hero-title">Stephen Nix</h1>
-        <h2 id="hero-subtitle">Full-stack Developer</h2>
-        <a href="https://www.biblegateway.com/passage/?search=Proverbs%2014%3A23&version=LEB" target="_blank">
-            <p>Proverbs 14:23</p>
-        </a>
-        <div id="hero-links">
-            <a href="https://github.com/s-nix" target="_blank">
-                <img class="hero-icon" src="assets/img/github.svg" />
+    <main id="page">
+        <section class="panel hero" id="home">
+            <img style="margin-right: -40px;" src="assets/img/stephen.png" alt="Stephen Nix portrait">
+            <h1 id="hero-title">Stephen Nix</h1>
+            <h2 id="hero-subtitle">Full-stack Developer</h2>
+            <a href="https://www.biblegateway.com/passage/?search=Proverbs%2014%3A23&version=LEB" target="_blank">
+                <p>Proverbs 14:23</p>
             </a>
-            <a href="https://www.linkedin.com/in/scnix" target="_blank">
-                <img class="hero-icon" src="assets/img/linkedin.svg" />
-            </a>
-            <a href="mailto:sn@nix.uno" target="_blank">
-                <img class="hero-icon" src="assets/img/envelope-solid.svg" />
-            </a>
-            <a href="https://discord.com/users/1421108727506931856" target="_blank">
-                <img class="hero-icon" src="assets/img/discord.svg" />
-            </a>
-        </div>
-    </div>
+            <div id="hero-links">
+                <a href="https://github.com/s-nix" target="_blank">
+                    <img class="hero-icon" src="assets/img/github.svg" alt="GitHub" />
+                </a>
+                <a href="https://www.linkedin.com/in/scnix" target="_blank">
+                    <img class="hero-icon" src="assets/img/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="mailto:sn@nix.uno" target="_blank">
+                    <img class="hero-icon" src="assets/img/envelope-solid.svg" alt="Email" />
+                </a>
+                <a href="https://discord.com/users/1421108727506931856" target="_blank">
+                    <img class="hero-icon" src="assets/img/discord.svg" alt="Discord" />
+                </a>
+            </div>
+            <button id="scroll-to-projects" type="button" aria-label="Scroll to projects">
+                <span>Projects</span>
+                <span aria-hidden="true">&darr;</span>
+            </button>
+        </section>
+        <section class="panel projects" id="projects">
+            <div class="projects-inner">
+                <p class="section-label">Selected Work</p>
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <header>
+                            <p class="project-tag">Frontend</p>
+                            <h3>nix.uno</h3>
+                        </header>
+                        <p>Personal site and playground for experimenting with performant UI, micro-interactions, and
+                            canvas effects.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/s-nix/nix.uno" target="_blank">Source</a>
+                            <a href="https://nix.uno" target="_blank">Live</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="/assets/img/stephen.png" />
+                        </div>
+                    </article>
 
+                    <article class="project-card under-construction">
+                        <header>
+                            <p class="project-tag">Backend</p>
+                            <h3>PSImmyBot</h3>
+                        </header>
+                        <p>PowerShell module for interacting with the ImmyBot API.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/s-nix/PSImmyBot" target="_blank">Source</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="/assets/img/PSImmyBot.png" />
+                        </div>
+                    </article>
+
+                    <article class="project-card under-construction">
+                        <header>
+                            <p class="project-tag">Backend</p>
+                            <h3>gosword</h3>
+                        </header>
+                        <p>Go module for interacting with SWORD modules from <a style="text-decoration-line: underline;"
+                                href="https://www.crosswire.org/sword/index.jsp">The SWORD Project</a>.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/s-nix/gosword" target="_blank">Source</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="/assets/img/gosword.png" />
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <header>
+                            <p class="project-tag">Backend</p>
+                            <h3>mk2i18n</h3>
+                        </header>
+                        <p>Convert localization source files into go-i18n message files (JSON, TOML, YAML).</p>
+                        <div class="project-links">
+                            <a href="https://github.com/s-nix/mk2i18n" target="_blank">Source</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="/assets/img/mk2i18n.png" />
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <header>
+                            <p class="project-tag">Backend</p>
+                            <h3>caddy-casefold</h3>
+                        </header>
+                        <p>Case-insensitive (Unicode-aware) path matching plugin for Caddy.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/s-nix/caddy-casefold" target="_blank">Source</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="/assets/img/caddy.svg" />
+                        </div>
+                    </article>
+
+                    <article class="project-card under-construction">
+                        <header>
+                            <p class="project-tag">Frontend/Backend</p>
+                            <h3>dvdripr</h3>
+                        </header>
+                        <p>Go module/app for ripping DVDs.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/s-nix/dvdripr" target="_blank">Source</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="/assets/img/dvdripr.png" />
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scroll.js" defer></script>
 </body>
 
 </html>
