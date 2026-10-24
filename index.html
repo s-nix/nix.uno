@@ -4,133 +4,560 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stephen Nix - nix.uno</title>
+    <title>Stephen Nix — Automation &amp; Full-Stack Engineer</title>
+    <meta name="description"
+        content="Stephen Nix builds automation and software for managed service providers: PowerShell, C#/.NET, Go and TypeScript, from endpoint tooling installed 13.6M+ times to multi-tenant AI platforms.">
+    <meta name="author" content="Stephen Nix">
+    <link rel="canonical" href="https://nix.uno/">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Stephen Nix — Automation &amp; Full-Stack Engineer">
+    <meta property="og:description"
+        content="MSP automation, integrations and full-stack platforms. Author of Strapper (13.6M+ PowerShell Gallery downloads).">
+    <meta property="og:url" content="https://nix.uno/">
+    <meta property="og:image" content="https://nix.uno/assets/img/stephen.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Stephen Nix",
+        "url": "https://nix.uno/",
+        "email": "mailto:sn@nix.uno",
+        "jobTitle": "Senior Consultant - RPA & Automation",
+        "worksFor": { "@type": "Organization", "name": "ProVal Technologies", "url": "https://provaltech.com" },
+        "sameAs": ["https://github.com/s-nix", "https://www.linkedin.com/in/scnix"],
+        "knowsAbout": ["PowerShell", "C#", ".NET", "TypeScript", "Go", "MSP automation", "RMM", "PSA", "AI integration"]
+    }
+    </script>
 </head>
 
 <body>
-    <div id="stars"></div>
+    <div id="stars" aria-hidden="true"></div>
     <script src="stars.js"></script>
+
+    <nav id="site-nav" aria-label="Sections">
+        <a class="nav-home" href="#home">nix.uno</a>
+        <div class="nav-links">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
     <main id="page">
         <section class="panel hero" id="home">
-            <img style="margin-right: -40px;" src="assets/img/stephen.png" alt="Stephen Nix portrait">
-            <h1 id="hero-title">Stephen Nix</h1>
-            <h2 id="hero-subtitle">Full-stack Developer</h2>
-            <div id="hero-links">
-                <a href="https://github.com/s-nix" target="_blank">
-                    <img class="hero-icon" src="assets/img/github.svg" alt="GitHub" />
-                </a>
-                <a href="https://www.linkedin.com/in/scnix" target="_blank">
-                    <img class="hero-icon" src="assets/img/linkedin.svg" alt="LinkedIn" />
-                </a>
-                <a href="mailto:sn@nix.uno" target="_blank">
-                    <img class="hero-icon" src="assets/img/envelope-solid.svg" alt="Email" />
-                </a>
-                <a href="https://discord.com/users/1288503512086614056" target="_blank">
-                    <img class="hero-icon" src="assets/img/discord.svg" alt="Discord" />
-                </a>
+            <div class="hero-inner">
+                <img class="hero-avatar" src="assets/img/stephen.png" alt="Pixel-art portrait of Stephen Nix">
+                <h1 id="hero-title">Stephen Nix</h1>
+                <p id="hero-subtitle">Automation &amp; Full-Stack Engineer</p>
+                <p class="hero-pitch">
+                    I build the software managed service providers run on: endpoint tooling in PowerShell, C# and Go,
+                    integrations across RMM and PSA platforms, and full-stack TypeScript products with AI built in.
+                    Fifteen years in managed IT, from repairing workstations to running a NOC to nearly seven years leading
+                    the DevOps team at <a class="inline" href="https://provaltech.com" target="_blank" rel="noopener">ProVal Technologies</a>.
+                </p>
+                <div class="hero-cta">
+                    <a class="button primary" href="mailto:sn@nix.uno">Email me</a>
+                    <a class="button" href="#experience">See my work &darr;</a>
+                </div>
+                <div id="hero-links">
+                    <a href="https://github.com/s-nix" target="_blank" rel="noopener" aria-label="GitHub">
+                        <img class="hero-icon" src="assets/img/github.svg" alt="" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/scnix" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <img class="hero-icon" src="assets/img/linkedin.svg" alt="" />
+                    </a>
+                    <a href="mailto:sn@nix.uno" aria-label="Email">
+                        <img class="hero-icon" src="assets/img/envelope-solid.svg" alt="" />
+                    </a>
+                    <a href="https://discord.com/users/1288503512086614056" target="_blank" rel="noopener" aria-label="Discord">
+                        <img class="hero-icon" src="assets/img/discord.svg" alt="" />
+                    </a>
+                </div>
             </div>
-            <button id="scroll-to-projects" type="button" aria-label="Scroll to projects">
-                <span>Projects</span>
-                <span aria-hidden="true">&darr;</span>
-            </button>
+
+            <ul class="stats" aria-label="Highlights">
+                <li>
+                    <strong>13.6M+</strong>
+                    <span>PowerShell Gallery downloads of Strapper, a module I wrote and maintain</span>
+                </li>
+                <li>
+                    <strong>15 yrs</strong>
+                    <span>in managed IT services, including ~7 leading DevOps at ProVal Technologies</span>
+                </li>
+                <li>
+                    <strong>1,500+</strong>
+                    <span>commits to ProVal's shared script library and public documentation</span>
+                </li>
+                <li>
+                    <strong>50+</strong>
+                    <span>repositories contributed to across PowerShell, C#, Go and TypeScript</span>
+                </li>
+            </ul>
         </section>
-        <section class="panel projects" id="projects">
-            <div class="projects-inner">
+
+        <section class="panel" id="experience">
+            <div class="section-inner">
+                <p class="section-label">Experience</p>
+                <h2>Where I've worked</h2>
+
+                <ol class="timeline">
+                <li>
+                <article class="job">
+                    <header class="job-header">
+                        <div>
+                            <h3>ProVal Technologies</h3>
+                            <p class="job-company-note">Automation content, tools and integrations for MSPs</p>
+                        </div>
+                        <p class="job-dates">Apr 2019 – Present</p>
+                    </header>
+                    <ul class="roles">
+                        <li>
+                            <span class="job-role">Senior Consultant – RPA &amp; Automation</span>
+                            <span class="role-dates">Jan 2026 – Present</span>
+                        </li>
+                        <li>
+                            <span class="job-role">DevOps Team Lead</span>
+                            <span class="role-dates">Apr 2019 – Jan 2026</span>
+                        </li>
+                    </ul>
+                    <p class="job-summary">
+                        Led the team that writes ProVal's scripts, modules and tools: the code that runs on client
+                        endpoints, the desktop and server tools behind it, the integrations between RMM, PSA and
+                        documentation platforms, and the standards everyone writes against. Now consulting on RPA and
+                        automation engagements.
+                    </p>
+                    <ul class="job-points">
+                        <li>
+                            <b>Created <a class="inline" href="https://www.powershellgallery.com/packages/Strapper" target="_blank" rel="noopener">Strapper</a></b>,
+                            a cross-platform PowerShell toolkit for logging, registry work and module bootstrapping.
+                            It underpins 400+ files of ProVal content and has been downloaded <b>13.6 million times</b>
+                            from the PowerShell Gallery.
+                        </li>
+                        <li>
+                            <b>Top contributor to the company script library</b> (900+ of ~1,860 commits) and to
+                            <a class="inline" href="https://content.provaltech.com" target="_blank" rel="noopener">content.provaltech.com</a>
+                            (660+ commits), the public documentation for ProVal's catalogue of RMM content.
+                        </li>
+                        <li>
+                            <b>Wrote ProVal's development standards</b> for code and documentation, and built
+                            automation that enforces branch rulesets across every company repository.
+                        </li>
+                        <li>
+                            <b>Built ProSync</b>, a C# ConnectWise Automate plugin and API that reviews, approves and
+                            distributes content from a central server to many Automate instances, plus <b>StickySync</b>,
+                            an Automate plugin that syncs passwords into IT Glue.
+                        </li>
+                        <li>
+                            <b>Shipped endpoint tools in .NET and Go</b>:
+                            <a class="inline" href="https://github.com/ProVal-Tech/Soji" target="_blank" rel="noopener">Soji</a> (disk cleanup),
+                            <a class="inline" href="https://github.com/ProVal-Tech/Prompter" target="_blank" rel="noopener">Prompter</a> (interactive user prompts),
+                            and <a class="inline" href="https://github.com/ProVal-Tech/WindowsUpgrader" target="_blank" rel="noopener">WindowsUpgrader</a>,
+                            a single-binary tool that runs unattended Windows 10 → 11 and feature-update upgrades.
+                        </li>
+                        <li>
+                            <b>Led security response tooling</b>: extended Datto's
+                            <a class="inline" href="https://github.com/ProVal-Tech/log4shell-tool" target="_blank" rel="noopener">Log4Shell detection tool</a>
+                            with faster file search, LunaSec scanning and a new logging system, and wrote mitigation
+                            modules for SMBGhost, SWEET32 and BEAST.
+                        </li>
+                        <li>
+                            <b>Ran platform migrations</b>: converted Kaseya VSA procedures into RMM-agnostic PowerShell
+                            for NinjaOne, each with a Pester suite and a PSScriptAnalyzer gate, and built Transitus, an
+                            Avalonia/.NET workbench for moving data between IT Glue and SQL Server.
+                        </li>
+                        <li>
+                            <b>Built integrations and cloud services</b>:
+                            <a class="inline" href="https://proval-tech.github.io/PageSignal/" target="_blank" rel="noopener">PageSignal</a>,
+                            a Chromium extension that syncs ServiceNow, ConnectWise and Jira tickets into HaloPSA with
+                            Supabase middleware and weekly AI analysis; an Azure Durable Functions pipeline that builds
+                            seven ConnectWise PSA and Sell reports in parallel and delivers them to SharePoint; and a
+                            .NET library for the Kaseya VSA API.
+                        </li>
+                        <li>
+                            <b>Helped hire</b>: built the technical assessment site used to screen candidates for
+                            ProVal's AI Automation Engineer role.
+                        </li>
+                    </ul>
+                </article>
+                </li>
+
+                <li>
+                <article class="job">
+                    <header class="job-header">
+                        <div>
+                            <h3>Snap Tech IT</h3>
+                            <p class="job-role">NOC Manager</p>
+                        </div>
+                        <p class="job-dates">Sep 2014 – Apr 2019</p>
+                    </header>
+                    <ul class="job-points">
+                        <li>
+                            <b>Rolled out ConnectWise Automate</b> and ran it as administrator, migrating 70+ client
+                            environments onto it.
+                        </li>
+                        <li>
+                            <b>Built a system in PowerShell and C#</b> that securely synced technician Active Directory
+                            accounts across 70+ client domains.
+                        </li>
+                        <li>
+                            <b>Built secure monitoring for Datto backups</b> in C#, parsing backup status XML.
+                        </li>
+                        <li>
+                            <b>Automated fixes for recurring problems</b> with PowerShell, C# and Automate scripting.
+                        </li>
+                        <li>
+                            <b>Kept the NOC meeting all seven of its assigned KPIs</b> throughout the year.
+                        </li>
+                        <li>
+                            <b>Core member of the team that moved the company's 8 servers to Microsoft Azure</b> over a
+                            single weekend.
+                        </li>
+                    </ul>
+                </article>
+                </li>
+
+                <li>
+                <article class="job">
+                    <header class="job-header">
+                        <div>
+                            <h3>Avision Technologies</h3>
+                            <p class="job-role">Senior Network Engineer</p>
+                        </div>
+                        <p class="job-dates">Sep 2013 – Sep 2014</p>
+                    </header>
+                    <ul class="job-points">
+                        <li>
+                            <b>Rolled out N-able RMM</b> and administered it, migrating 50+ client environments.
+                        </li>
+                        <li>
+                            <b>Used PowerShell to push large changes</b> across client environments on tight deadlines.
+                        </li>
+                        <li>
+                            <b>Senior escalation point</b> for support tickets.
+                        </li>
+                    </ul>
+                </article>
+                </li>
+
+                <li>
+                <article class="job compact">
+                    <header class="job-header">
+                        <div>
+                            <h3>A.D.B. Services</h3>
+                            <p class="job-role">Level II Technician</p>
+                        </div>
+                        <p class="job-dates">Jun 2011 – Sep 2013</p>
+                    </header>
+                    <ul class="job-points">
+                        <li>Administered 30+ Active Directory and Exchange environments and handled escalations.</li>
+                        <li>Moved the company to Zendesk for ticketing and built a new company website.</li>
+                    </ul>
+                </article>
+                </li>
+
+                <li>
+                <article class="job compact">
+                    <header class="job-header">
+                        <div>
+                            <h3>Medical Practice Technologies</h3>
+                            <p class="job-role">Computer Repair Technician</p>
+                        </div>
+                        <p class="job-dates">Apr 2008 – Mar 2009</p>
+                    </header>
+                    <ul class="job-points">
+                        <li>Supported 20+ doctor's offices on site and built 200+ workstations to client specs.</li>
+                        <li>Trained in VBScript scripting by the company's lead developer.</li>
+                    </ul>
+                </article>
+                </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="panel" id="projects">
+            <div class="section-inner">
                 <p class="section-label">Selected Work</p>
                 <h2>Projects</h2>
+                <div class="projects-grid featured-grid">
+                    <article class="project-card featured">
+                        <header>
+                            <p class="project-tag">AI platform · TypeScript</p>
+                            <h3>Olympia</h3>
+                        </header>
+                        <p>
+                            AI alert remediation for MSPs. Ingests alerts from the RMMs an MSP already runs, drafts a
+                            remediation script, routes it through review and approval, and lets proven patterns
+                            graduate to autonomous fixes per client. Approvals are signed in the approver's browser
+                            and bound to the exact script that runs. Live on NinjaOne against real endpoints.
+                        </p>
+                        <ul class="chips">
+                            <li>Fastify + OpenAPI</li>
+                            <li>Next.js</li>
+                            <li>Postgres row-level security</li>
+                            <li>BullMQ</li>
+                            <li>Supabase Auth + MFA</li>
+                            <li>596 tests</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="private">Private repo · demo on request</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card featured">
+                        <header>
+                            <p class="project-tag">Migration platform · TypeScript</p>
+                            <h3>Conduit</h3>
+                        </header>
+                        <p>
+                            A modular platform for planning, visualizing and running system-to-system data migrations,
+                            starting with ITPortal → IT Glue and IT Glue tenant-to-tenant. AI suggests field mappings,
+                            related records are migrated rather than dropped, and attachments come across from source
+                            exports.
+                        </p>
+                        <ul class="chips">
+                            <li>TypeScript</li>
+                            <li>LLM-assisted mapping</li>
+                            <li>IT Glue API</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="private">Private repo · demo on request</span>
+                        </div>
+                    </article>
+                </div>
                 <div class="projects-grid">
                     <article class="project-card">
                         <header>
-                            <p class="project-tag">Frontend</p>
-                            <h3>nix.uno</h3>
+                            <p class="project-tag">Desktop app · Go</p>
+                            <h3>Sims Saver</h3>
                         </header>
-                        <p>Personal site and playground for experimenting with performant UI, micro-interactions, and
-                            canvas effects.</p>
+                        <p>
+                            Background app for Windows, macOS and Linux that keeps game saves and mods in sync across
+                            computers through the user's own cloud storage, with version history, conflict-safe merging,
+                            OAuth setup, signed installers and auto-update.
+                        </p>
+                        <ul class="chips">
+                            <li>Go</li>
+                            <li>Wails + Svelte</li>
+                            <li>rclone</li>
+                            <li>CI releases</li>
+                        </ul>
                         <div class="project-links">
-                            <a href="https://github.com/s-nix/nix.uno" target="_blank">Source</a>
-                            <a href="https://nix.uno" target="_blank">Live</a>
-                        </div>
-                        <div class="project-image">
-                            <img src="/assets/img/stephen.png" />
+                            <a href="https://sims-saver.nix.uno" target="_blank" rel="noopener">Download</a>
                         </div>
                     </article>
 
-                    <article class="project-card under-construction">
+                    <article class="project-card">
                         <header>
-                            <p class="project-tag">Backend</p>
+                            <p class="project-tag">Web + mobile · TypeScript</p>
+                            <h3>Secure Sentiments</h3>
+                        </header>
+                        <p>
+                            Invite-only archive for cards, photos and letters. A 3D viewer mirrors handling the original
+                            item, and AI captions every upload and transcribes handwriting.
+                        </p>
+                        <ul class="chips">
+                            <li>Next.js 15</li>
+                            <li>Expo</li>
+                            <li>Drizzle + Neon</li>
+                            <li>Clerk</li>
+                            <li>Cloudflare R2</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://secure-sentiments-web.vercel.app" target="_blank" rel="noopener">Live</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <header>
+                            <p class="project-tag">AI tooling · TypeScript</p>
+                            <h3>halo-mcp</h3>
+                        </header>
+                        <p>
+                            Model Context Protocol server that gives Claude first-class access to HaloPSA tickets,
+                            clients, assets, projects and invoices.
+                        </p>
+                        <ul class="chips">
+                            <li>MCP</li>
+                            <li>OAuth</li>
+                            <li>HaloPSA API</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/s-nix/halo-mcp" target="_blank" rel="noopener">Source</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <header>
+                            <p class="project-tag">PowerShell · C#</p>
                             <h3>PSImmyBot</h3>
                         </header>
-                        <p>PowerShell module for interacting with the ImmyBot API.</p>
+                        <p>
+                            Binary PowerShell module and .NET 8 library for automating the ImmyBot API, with Azure AD
+                            auth, retries and a documentation site.
+                        </p>
+                        <ul class="chips">
+                            <li>.NET 8</li>
+                            <li>PowerShell</li>
+                            <li>Alpha</li>
+                        </ul>
                         <div class="project-links">
-                            <a href="https://github.com/s-nix/PSImmyBot" target="_blank">Source</a>
+                            <a href="https://github.com/s-nix/PSImmyBot" target="_blank" rel="noopener">Source</a>
+                            <a href="https://s-nix.github.io/PSImmyBot/" target="_blank" rel="noopener">Docs</a>
                         </div>
                         <div class="project-image">
-                            <img src="/assets/img/PSImmyBot.png" />
+                            <img src="/assets/img/PSImmyBot.png" alt="" />
                         </div>
                     </article>
 
                     <article class="project-card">
                         <header>
-                            <p class="project-tag">Backend</p>
-                            <h3>mk2i18n</h3>
+                            <p class="project-tag">Client work · Next.js</p>
+                            <h3>Duncan Heating &amp; Air</h3>
                         </header>
-                        <p>Convert localization source files into go-i18n message files (JSON, TOML, YAML).</p>
+                        <p>
+                            Website for a North Georgia HVAC company: SEO with structured data, an admin area, and
+                            weekly blog posts written and illustrated by AI. Self-hosted behind Caddy.
+                        </p>
+                        <ul class="chips">
+                            <li>Next.js 15</li>
+                            <li>Tailwind</li>
+                            <li>Claude API</li>
+                            <li>Caddy</li>
+                        </ul>
                         <div class="project-links">
-                            <a href="https://github.com/s-nix/mk2i18n" target="_blank">Source</a>
-                        </div>
-                        <div class="project-image">
-                            <img src="/assets/img/mk2i18n.png" />
+                            <a href="https://duncanheatingandairservices.com" target="_blank" rel="noopener">Live</a>
                         </div>
                     </article>
 
                     <article class="project-card">
                         <header>
-                            <p class="project-tag">Backend</p>
+                            <p class="project-tag">Go</p>
                             <h3>caddy-casefold</h3>
                         </header>
-                        <p>Case-insensitive (Unicode-aware) path matching plugin for Caddy.</p>
+                        <p>Caddy plugin for case-insensitive, Unicode-aware path matching.</p>
+                        <ul class="chips">
+                            <li>Go</li>
+                            <li>Caddy</li>
+                        </ul>
                         <div class="project-links">
-                            <a href="https://github.com/s-nix/caddy-casefold" target="_blank">Source</a>
+                            <a href="https://github.com/s-nix/caddy-casefold" target="_blank" rel="noopener">Source</a>
                         </div>
                         <div class="project-image">
-                            <img src="/assets/img/caddy.svg" />
+                            <img src="/assets/img/caddy.svg" alt="" />
                         </div>
                     </article>
 
-                    <article class="project-card under-construction">
-                        <header>
-                            <p class="project-tag">Frontend/Backend</p>
-                            <h3>dvdripr</h3>
-                        </header>
-                        <p>Go module/app for ripping DVDs.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/s-nix/dvdripr" target="_blank">Source</a>
-                        </div>
-                        <div class="project-image">
-                            <img src="/assets/img/dvdripr.png" />
-                        </div>
-                    </article>
+                </div>
+                <p class="upstream">
+                    More on <a class="inline" href="https://github.com/s-nix" target="_blank" rel="noopener">GitHub</a>,
+                    including <a class="inline" href="https://github.com/s-nix/mk2i18n" target="_blank" rel="noopener">mk2i18n</a>,
+                    a Go CLI for go-i18n message files. Contributions merged upstream to
+                    <a class="inline" href="https://github.com/microsoft/winget-pkgs" target="_blank" rel="noopener">microsoft/winget-pkgs</a>
+                    and
+                    <a class="inline" href="https://github.com/BCUninstaller/Bulk-Crap-Uninstaller" target="_blank" rel="noopener">Bulk Crap Uninstaller</a>.
+                </p>
+            </div>
+        </section>
 
-                    <article class="project-card">
-                        <header>
-                            <p class="project-tag">Frontend</p>
-                            <h3>Duncan Heating & Air Services</h3>
-                        </header>
-                        <p>Business website for a local HVAC company featuring service information and contact details.</p>
-                        <div class="project-links">
-                            <a href="https://duncanheatingandairservices.com" target="_blank">Live</a>
-                        </div>
-                        <div class="project-image">
-                            <img src="/assets/img/stephen.png" />
-                        </div>
-                    </article>
+        <section class="panel" id="skills">
+            <div class="section-inner">
+                <p class="section-label">Toolbox</p>
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Languages</h3>
+                        <ul class="chips">
+                            <li>PowerShell</li>
+                            <li>C# / .NET</li>
+                            <li>TypeScript</li>
+                            <li>Go</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                            <li>Bash</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>MSP platforms</h3>
+                        <ul class="chips">
+                            <li>ConnectWise Automate</li>
+                            <li>ConnectWise PSA</li>
+                            <li>NinjaOne</li>
+                            <li>Kaseya VSA</li>
+                            <li>Datto RMM</li>
+                            <li>ImmyBot</li>
+                            <li>Rewst</li>
+                            <li>HaloPSA</li>
+                            <li>IT Glue</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Web &amp; backend</h3>
+                        <ul class="chips">
+                            <li>Next.js / React</li>
+                            <li>Fastify</li>
+                            <li>Node.js</li>
+                            <li>Postgres / Prisma</li>
+                            <li>Supabase</li>
+                            <li>Redis / BullMQ</li>
+                            <li>OpenAPI</li>
+                            <li>Avalonia / WPF</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Cloud &amp; ops</h3>
+                        <ul class="chips">
+                            <li>Azure Functions</li>
+                            <li>Docker</li>
+                            <li>GitHub Actions</li>
+                            <li>Caddy</li>
+                            <li>Vercel</li>
+                            <li>SharePoint / Graph</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>AI</h3>
+                        <ul class="chips">
+                            <li>Claude API</li>
+                            <li>MCP servers</li>
+                            <li>LLM-generated scripts with human approval</li>
+                            <li>AI-assisted data mapping</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Practices</h3>
+                        <ul class="chips">
+                            <li>Pester</li>
+                            <li>PSScriptAnalyzer</li>
+                            <li>Multi-tenant security</li>
+                            <li>Code &amp; docs standards</li>
+                            <li>Technical writing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel contact" id="contact">
+            <div class="section-inner">
+                <p class="section-label">Contact</p>
+                <h2>Let's talk</h2>
+                <p class="contact-pitch">
+                    Hiring for automation, integrations or full-stack work? I'm happy to walk through any of the
+                    private projects above.
+                </p>
+                <div class="hero-cta">
+                    <a class="button primary" href="mailto:sn@nix.uno">sn@nix.uno</a>
+                    <a class="button" href="https://www.linkedin.com/in/scnix" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="button" href="https://github.com/s-nix" target="_blank" rel="noopener">GitHub</a>
                 </div>
             </div>
         </section>
     </main>
-    <script src="scroll.js" defer></script>
 </body>
 
 </html>
