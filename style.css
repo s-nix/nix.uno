@@ -490,9 +490,10 @@ main#page {
     margin-top: auto;
     padding-top: 0.25em;
     display: flex;
+    align-items: center;
     gap: 1em;
+    min-height: calc(36px + 0.25em);
     color: var(--fg);
-    padding-right: 60px;
 }
 
 .project-links a {
@@ -510,19 +511,15 @@ main#page {
 }
 
 .project-image {
-    position: absolute;
-    bottom: 1.25em;
-    right: 1.25em;
-    max-width: 44px;
-    max-height: 44px;
+    margin-left: auto;
     display: flex;
-    justify-content: flex-end;
     pointer-events: none;
 }
 
 .project-image img {
-    max-width: 100%;
-    height: auto;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
 }
 
 .upstream {
@@ -577,8 +574,32 @@ main#page {
     }
 
     .nav-links {
-        gap: 1em;
+        flex: 1;
+        justify-content: space-between;
+        gap: 0.5em;
         font-size: 0.85rem;
+    }
+
+    .roles li {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .roles {
+        gap: 0.6em;
+    }
+
+    .contact .hero-cta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact .button {
+        justify-content: center;
+    }
+
+    .contact .button.primary {
+        grid-column: 1 / -1;
     }
 
     .panel {
